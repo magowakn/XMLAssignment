@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="courses.xsl"?>
+<course xmlns:xsi="http://www.w3.org/2001/XMLScehma-instance"
+	xsi:noNamespaceSchemaLocation="courses.xsd">
+	<!-- All payload data belong here -->
+	<name>Augusta National Golf Club</name>
+	<address>2604 Washington Rd.</address>
+	<city>Augusta</city>
+	<country>United States</country>
+	<yardage>7475</yardage>
+	<tournament_start_date>2020-11-12</tournament_start_date>
+	<tournament_end_date>2020-11-15</tournament_end_date>
+	<holds_major>True</holds_major>
+	<favorable_ball_flight>high_ball_flight</favorable_ball_flight>
+	<course_type>Parkland</course_type>
+	<holes>
+		<hole>
+			<par>4</par>
+			<handicap>9</handicap>
+			<length>455</length>
+			<name>Tea_Olive</name>
+			<comments>Dogleg_right</comments>
+		</hole>
+		<hole>
+			<par>5</par>
+			<handicap>1</handicap>
+			<length>455</length>
+			<name>Pink_Dogwood</name>
+			<comments>Dogleg_left</comments>
+		</hole>
+		<hole>
+			<par>4</par>
+			<handicap>13</handicap>
+			<length>350</length>
+			<name>Flowering_Peach</name>
+			<comments>Straight</comments>
+		</hole>
+		<hole>
+			<par>3</par>
+			<handicap>15</handicap>
+			<length>240</length>
+			<name>Flowering_Crab_Apple</name>
+			<comments>Downhill</comments>
+		</hole>
+	</holes>
+</course>

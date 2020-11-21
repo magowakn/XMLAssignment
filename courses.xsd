@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="course">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="name">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="60"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="address" minOccurs="1">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="60"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="city" minOccurs="1">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="30"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="country" minOccurs="1">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="60"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="yardage" minOccurs="1">
+					<xs:simpleType>
+						<xs:restriction base="xs:integer">
+							<xs:maxInclusive value="8000"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="tournament_start_date" type="xs:date" minOccurs="1"/>
+				<xs:element name="tournament_end_date" type="xs:date" minOccurs="1"/>
+				<xs:element name="holds_major" type="xs:boolean" minOccurs="1"/>
+				<xs:element name="favorable_ball_flight" minOccurs="1">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:enumeration value="low_ball_flight"/>
+							<xs:enumeration value="mid_ball_flight"/>
+							<xs:enumeration value="high_ball_flight"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="course_type" minOccurs="1">
+					<xs:complexType>
+						<xs:restriction base="xs:string">
+							<xs:enumeration value="Links"/>
+							<xs:enumeration value="Parkland"/>
+							<xs:enumeration value="Heathland"/>
+							<xs:enumeration value="Sandbelt"/>
+							<xs:enumeration value="Stadium"/>
+							<xs:enumeration value="Par-3"/>
+						</xs:restriction>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="holes" minOccurs="1">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="hole" type="holeType" minOccurs="1"
+							maxOccurs="18"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	
+		<xs:element name="holeType">
+			<xs:sequence>
+				<xs:element name="par" type="xs:integer" minOccurs="1"/>
+				<xs:element name="handicap" type="xs:integer" minOccurs="1"/>
+				<xs:element name="length" type="xs:integer" minOccurs="1"/>
+				<xs:element name="name" type="xs:integer" minOccurs="1">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="60"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="comments">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="1000"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+			</xs:sequence>
+		</xs:element>
+		
+</xs:schema>
